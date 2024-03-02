@@ -1,0 +1,55 @@
+body {
+    background-image: url('floobg.JPG');
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+h3 {
+    text-align: center;
+    color: red;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+h0 {
+    text-align: center;
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+table {
+    margin: 0 auto;
+    width: 500px;
+    height: 400px;
+    background-color: gray;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"] {
+    width: calc(100% - 10px);
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus {
+    outline: none;
+    border-color: dodgerblue;
+}
+

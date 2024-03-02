@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First Website</title>
+    <link rel="stylesheet" type="text/css" href="style_index_registration.css">
+    <style>
+        /* Additional CSS styles can be added here */
+    </style>
+</head>
+<body>
+    <h3>
+        <!-- Header content -->
+    </h3>
+    <br><br><br><br><br><br>
+    <table id="registrationTable" align="center" width="500" height="400" bgcolor="gray">
+        <tr>
+            <td colspan="2">
+                <h1 align="center">REGISTRATION</h1>
+            </td>
+        </tr>
+        <tr>
+            <td><font size="4">First Name</font></td>
+            <td><input id="firstNameInput" size="29" type="text"/></td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td><input id="lastNameInput" size="29" type="text"/></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input id="passwordInput" size="29" type="password"/></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input id="emailInput" size="29" type="email"/></td>
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td><input id="ageInput" size="29" type="number" min="0" step="1"/></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <button onclick="saveData()">Save Data</button>
+            </td>
+        </tr>
+    </table>
+    
+    <h1 align="center">&nbsp; &nbsp; &nbsp;<font color="white">Welcome To<br></font>
+        <font color="orange">Best College For Higher Education</font></h1>
+    <h0 align="center">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <!-- Footer content -->
+    </h0>
+
+    <script>
+        function saveData() {
+            var firstName = document.getElementById("firstNameInput").value;
+            var lastName = document.getElementById("lastNameInput").value;
+            var password = document.getElementById("passwordInput").value;
+            var email = document.getElementById("emailInput").value;
+            var age = document.getElementById("ageInput").value;
+
+            // Create a data object
+            var data = {
+                firstName: firstName,
+                lastName: lastName,
+                password: password,
+                email: email,
+                age: age
+            };
+
+            // Convert data to JSON format
+            var jsonData = JSON.stringify(data);
+
+            // Save data to localStorage
+            localStorage.setItem('userData', jsonData);
+            
+            // Alert to confirm data saved
+            alert('Data saved successfully!');
+        }
+    </script>
+</body>
+</html>

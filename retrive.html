@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Retrieve Data from localStorage</title>
+    <script>
+        function retrieveData() {
+            // Retrieve data from localStorage
+            var jsonData = localStorage.getItem('userData');
+
+            if (jsonData) {
+                // Convert JSON data back to JavaScript object
+                var data = JSON.parse(jsonData);
+
+                // Display the retrieved data
+                document.getElementById("firstName").textContent = "First Name: " + data.firstName;
+                document.getElementById("lastName").textContent = "Last Name: " + data.lastName;
+                document.getElementById("password").textContent = "Password: " + data.password;
+                document.getElementById("email").textContent = "Email: " + data.email;
+                document.getElementById("age").textContent = "Age: " + data.age;
+            } else {
+                alert('No data found!');
+            }
+        }
+    </script>
+</head>
+<body background="bg4.avif">
+    <h2>Retrieved Data:</h2>
+    <div id="firstName"></div>
+    <div id="lastName"></div>
+    <div id="password"></div>
+    <div id="email"></div>
+    <div id="age"></div>
+
+    <button onclick="retrieveData()">Retrieve Data</button>
+</body>
+</html>
